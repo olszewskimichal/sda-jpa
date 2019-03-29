@@ -14,7 +14,7 @@ public class SelectEmployeeById {
 
     public static void main(String[] args) {
         Employee employee = getEntityManager().find(Employee.class, 1L);
-        System.err.println(employee);
+        System.out.println(employee);
     }
 
 }

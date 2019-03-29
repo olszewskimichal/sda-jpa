@@ -12,6 +12,6 @@ public class QuerySelectEmployee {
         EntityManager em = INSTANCE.getEntityManager();
         Query query = em.createQuery("select e from Employee e");
         List<Employee> resultList = query.getResultList();
-        resultList.forEach(v-> System.err.println(v));
+        resultList.forEach(System.out::println);
     }
 }
