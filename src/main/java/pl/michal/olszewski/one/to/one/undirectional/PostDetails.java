@@ -1,6 +1,9 @@
 package pl.michal.olszewski.one.to.one.undirectional;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "POST_DETAILS_1")
@@ -30,8 +33,8 @@ public class PostDetails {
     @Override
     public String toString() {
         return "PostDetails3{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
-                '}';
+            "id=" + id +
+            ", text='" + text + '\'' +
+            '}';
     }
 }

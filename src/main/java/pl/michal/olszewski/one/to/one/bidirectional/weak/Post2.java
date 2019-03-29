@@ -1,6 +1,10 @@
 package pl.michal.olszewski.one.to.one.bidirectional.weak;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "POST_2")
@@ -34,10 +38,10 @@ public class Post2 {
     @Override
     public String toString() {
         return "Post3{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", postDetails2=" + postDetails2 +
-                '}';
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", postDetails2=" + postDetails2 +
+            '}';
     }
 
     public PostDetails2 getPostDetails2() {

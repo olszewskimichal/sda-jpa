@@ -1,6 +1,12 @@
 package pl.michal.olszewski.one.to.many.bidirectional;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "post_comment6")
@@ -42,8 +48,8 @@ public class PostComment6 {
     @Override
     public String toString() {
         return "PostComment6{" +
-                "id=" + id +
-                ", review='" + review + '\'' +
-                '}';
+            "id=" + id +
+            ", review='" + review + '\'' +
+            '}';
     }
 }

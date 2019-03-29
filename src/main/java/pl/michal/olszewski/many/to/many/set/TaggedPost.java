@@ -1,9 +1,14 @@
 package pl.michal.olszewski.many.to.many.set;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity(name = "TaggedPost")
@@ -15,13 +20,6 @@ public class TaggedPost {
     private Long id;
 
     private String title;
-
-    public TaggedPost() {}
-
-    public TaggedPost(String title) {
-        this.title = title;
-    }
-
     @ManyToMany(cascade = {
         CascadeType.PERSIST,
         CascadeType.MERGE
@@ -31,6 +29,13 @@ public class TaggedPost {
         inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
     private Set<Tag> tags = new HashSet<>();
+
+    public TaggedPost() {
+    }
+
+    public TaggedPost(String title) {
+        this.title = title;
+    }
 
     public void addTag(Tag tag) {
         tags.add(tag);

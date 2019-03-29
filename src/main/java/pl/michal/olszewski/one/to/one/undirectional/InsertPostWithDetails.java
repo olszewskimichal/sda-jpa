@@ -9,9 +9,9 @@ public class InsertPostWithDetails {
         EntityManager em = INSTANCE.getEntityManager();
         em.getTransaction().begin();
 
-        Post post=new Post();
+        Post post = new Post();
         post.setTitle("title1");
-        PostDetails details=new PostDetails();
+        PostDetails details = new PostDetails();
         details.setText("details1");
         em.persist(details);
         post.setPostDetails(details);

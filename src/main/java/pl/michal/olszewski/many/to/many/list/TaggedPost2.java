@@ -1,8 +1,13 @@
 package pl.michal.olszewski.many.to.many.list;
 
-import pl.michal.olszewski.many.to.many.set.Tag;
-
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,13 +20,6 @@ public class TaggedPost2 {
     private Long id;
 
     private String title;
-
-    public TaggedPost2() {}
-
-    public TaggedPost2(String title) {
-        this.title = title;
-    }
-
     @ManyToMany(cascade = {
         CascadeType.PERSIST,
         CascadeType.MERGE
@@ -31,6 +29,13 @@ public class TaggedPost2 {
         inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
     private List<Tag2> tags = new ArrayList<>();
+
+    public TaggedPost2() {
+    }
+
+    public TaggedPost2(String title) {
+        this.title = title;
+    }
 
     public void addTag(Tag2 tag) {
         tags.add(tag);

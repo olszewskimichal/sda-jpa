@@ -1,9 +1,11 @@
 package pl.michal.olszewski.many.to.many.set;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity(name = "Tag")
@@ -19,7 +21,8 @@ public class Tag {
     @ManyToMany(mappedBy = "tags")
     private Set<TaggedPost> posts = new HashSet<>();
 
-    public Tag() {}
+    public Tag() {
+    }
 
     public Tag(String name) {
         this.name = name;

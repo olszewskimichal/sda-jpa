@@ -9,12 +9,12 @@ public class InsertPostWithComments {
         EntityManager em = INSTANCE.getEntityManager();
         em.getTransaction().begin();
 
-        Post5 post=new Post5();
+        Post5 post = new Post5();
         post.setTitle("title1");
-        PostComment5 comment=new PostComment5();
+        PostComment5 comment = new PostComment5();
         comment.setReview("review1");
         post.getComments().add(comment);
-        PostComment5 comment2=new PostComment5();
+        PostComment5 comment2 = new PostComment5();
         comment2.setReview("review2");
         post.getComments().add(comment2);
         em.persist(post);

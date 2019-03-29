@@ -1,6 +1,11 @@
 package pl.michal.olszewski.one.to.one.bidirectional.strong;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "POST_DETAILS_3")
@@ -42,8 +47,8 @@ public class PostDetails3 {
     @Override
     public String toString() {
         return "PostDetails3{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
-                '}';
+            "id=" + id +
+            ", text='" + text + '\'' +
+            '}';
     }
 }

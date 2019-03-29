@@ -8,7 +8,7 @@ public class SelectEmployeeById {
 
     private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("test");
 
-    public static EntityManager getEntityManager(){
+    public static EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
 

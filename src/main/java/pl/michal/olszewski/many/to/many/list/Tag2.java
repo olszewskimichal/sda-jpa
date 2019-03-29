@@ -1,6 +1,10 @@
 package pl.michal.olszewski.many.to.many.list;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +21,8 @@ public class Tag2 {
     @ManyToMany(mappedBy = "tags")
     private List<TaggedPost2> posts = new ArrayList<>();
 
-    public Tag2() {}
+    public Tag2() {
+    }
 
     public Tag2(String name) {
         this.name = name;

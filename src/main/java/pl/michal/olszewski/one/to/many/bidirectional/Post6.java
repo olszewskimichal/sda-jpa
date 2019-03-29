@@ -1,6 +1,11 @@
 package pl.michal.olszewski.one.to.many.bidirectional;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +20,9 @@ public class Post6 {
     private String title;
 
     @OneToMany(
-            mappedBy = "post",
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+        mappedBy = "post",
+        cascade = CascadeType.ALL,
+        orphanRemoval = true
     )
     private List<PostComment6> comments = new ArrayList<>();
 
@@ -48,9 +53,9 @@ public class Post6 {
     @Override
     public String toString() {
         return "Post4{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", comments=" + comments +
-                '}';
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", comments=" + comments +
+            '}';
     }
 }

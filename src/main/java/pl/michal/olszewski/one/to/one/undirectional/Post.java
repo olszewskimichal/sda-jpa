@@ -1,6 +1,11 @@
 package pl.michal.olszewski.one.to.one.undirectional;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "POST_1")
@@ -35,10 +40,10 @@ public class Post {
     @Override
     public String toString() {
         return "Post3{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", postDetails=" + postDetails +
-                '}';
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", postDetails=" + postDetails +
+            '}';
     }
 
     public PostDetails getPostDetails() {

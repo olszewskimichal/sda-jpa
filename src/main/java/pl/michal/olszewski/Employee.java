@@ -10,9 +10,9 @@ import javax.persistence.Table;
 public class Employee {
     @Id
     @GeneratedValue
-    private  Long id;
-    private  String name;
-    private  Long salary;
+    private Long id;
+    private String name;
+    private Long salary;
 
     public Employee() {
     }
@@ -26,20 +26,20 @@ public class Employee {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Long getSalary() {
-        return salary;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getSalary() {
+        return salary;
     }
 
     public void setSalary(Long salary) {
@@ -49,9 +49,9 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", salary=" + salary +
-                '}';
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", salary=" + salary +
+            '}';
     }
 }

@@ -2,7 +2,6 @@ package pl.michal.olszewski;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-
 import java.util.List;
 
 import static pl.michal.olszewski.EntityManagerSingleton.INSTANCE;
