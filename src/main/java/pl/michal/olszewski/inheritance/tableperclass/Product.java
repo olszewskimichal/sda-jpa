@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
-@Entity
+@Entity(name = "ProductPerClass")
 @Table(name = "PROD")
 class Product extends EntityBase {
     private BigDecimal price;

@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import java.math.BigDecimal;
 
-@Entity
+@Entity(name = "ProductSingle")
 @DiscriminatorValue("prod")
 class Product extends EntityBase {
     private BigDecimal price;

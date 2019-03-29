@@ -1,9 +1,6 @@
 package pl.michal.olszewski.pre;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -56,7 +53,7 @@ public class Car {
         this.updatedAt = new Date();
     }
 
-    @PrePersist
+    @PreUpdate
     public void preUpdate() {
         this.updatedAt = new Date();
     }

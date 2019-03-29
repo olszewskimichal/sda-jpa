@@ -7,7 +7,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name = "JOINED_BASE")
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "JOINED_BASE")
 abstract class EntityBase {

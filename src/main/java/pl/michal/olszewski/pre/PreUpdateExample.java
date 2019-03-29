@@ -10,7 +10,8 @@ public class PreUpdateExample {
 
         em.getTransaction().begin();
 
-        em.find(Car.class, 44L);
+        Car car = em.find(Car.class, 31L);
+        car.setName("noWyCar");
 
         em.getTransaction().commit();
     }

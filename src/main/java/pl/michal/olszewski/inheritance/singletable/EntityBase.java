@@ -8,7 +8,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name = "SINGLE_TABLE")
 @Table(name = "SINGLE_TABLE")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 abstract class EntityBase {

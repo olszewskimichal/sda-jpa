@@ -19,19 +19,14 @@ public class User {
 
     @Embedded
     @AttributeOverrides(value = {
-        @AttributeOverride(name = "addressLine1", column = @Column(name = "house_number")),
-        @AttributeOverride(name = "addressLine2", column = @Column(name = "street")),
-        @AttributeOverride(name = "addressLine3", column = @Column(name = "street4"))
+        @AttributeOverride(name = "city", column = @Column(name = "contact_city")),
+        @AttributeOverride(name = "street", column = @Column(name = "contact_street")),
+        @AttributeOverride(name = "zipCode", column = @Column(name = "contact_zipCode"))
 
     })
     private Address contactAddress;
 
     @Embedded
-    @AttributeOverrides(value = {
-        @AttributeOverride(name = "addressLine1", column = @Column(name = "house_number")),
-        @AttributeOverride(name = "addressLine2", column = @Column(name = "street")),
-        @AttributeOverride(name = "addressLine3", column = @Column(name = "street5"))
-    })
     private Address livingAddress;
 
     public Long getId() {
