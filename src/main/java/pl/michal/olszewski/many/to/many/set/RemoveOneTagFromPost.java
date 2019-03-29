@@ -9,7 +9,7 @@ public class RemoveOneTagFromPost {
         EntityManager em = INSTANCE.getEntityManager();
         em.getTransaction().begin();
 
-        TaggedPost post1 = em.find(TaggedPost.class, 30L);
+        TaggedPost post1 = em.find(TaggedPost.class, 45L);
         post1.removeTag(post1.getTags().iterator().next());
 
         em.getTransaction().commit();
