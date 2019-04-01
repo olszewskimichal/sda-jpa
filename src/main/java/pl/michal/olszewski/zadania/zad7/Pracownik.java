@@ -1,4 +1,4 @@
-package pl.michal.olszewski.materialy;
+package pl.michal.olszewski.zadania.zad7;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "pracownik")
+public class Pracownik {
 
   @Id
   @GeneratedValue
@@ -15,10 +15,10 @@ public class Employee {
   private String name;
   private Long salary;
 
-  public Employee() {
+  public Pracownik() {
   }
 
-  public Employee(String name, Long salary) {
+  Pracownik(String name, Long salary) {
     this.name = name;
     this.salary = salary;
   }
@@ -49,7 +49,7 @@ public class Employee {
 
   @Override
   public String toString() {
-    return "Employee{" +
+    return "Pracownik{" +
         "id=" + id +
         ", name='" + name + '\'' +
         ", salary=" + salary +
