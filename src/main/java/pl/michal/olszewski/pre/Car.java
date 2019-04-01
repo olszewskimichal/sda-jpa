@@ -1,60 +1,65 @@
 package pl.michal.olszewski.pre;
 
-import javax.persistence.*;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 @Entity
 public class Car {
-    @Id
-    @GeneratedValue
-    private Long id;
 
-    private String name;
+  @Id
+  @GeneratedValue
+  private Long id;
 
-    private Date createdAt;
+  private String name;
 
-    private Date updatedAt;
+  private Date createdAt;
 
-    public Long getId() {
-        return id;
-    }
+  private Date updatedAt;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
+  public Date getCreatedAt() {
+    return createdAt;
+  }
 
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
+  public void setCreatedAt(Date createdAt) {
+    this.createdAt = createdAt;
+  }
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+  public Date getUpdatedAt() {
+    return updatedAt;
+  }
 
-    @PrePersist
-    public void prePersist() {
-        this.createdAt = new Date();
-        this.updatedAt = new Date();
-    }
+  public void setUpdatedAt(Date updatedAt) {
+    this.updatedAt = updatedAt;
+  }
 
-    @PreUpdate
-    public void preUpdate() {
-        this.updatedAt = new Date();
-    }
+  @PrePersist
+  public void prePersist() {
+    this.createdAt = new Date();
+    this.updatedAt = new Date();
+  }
+
+  @PreUpdate
+  public void preUpdate() {
+    this.updatedAt = new Date();
+  }
 }

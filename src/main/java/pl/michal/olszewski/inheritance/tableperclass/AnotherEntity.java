@@ -7,7 +7,7 @@ import javax.persistence.Table;
 @Table(name = "OTHERS")
 class AnotherEntity extends EntityBase {
 
-    public AnotherEntity(String name) {
-        super(name);
-    }
+  public AnotherEntity(String name) {
+    super(name);
+  }
 }

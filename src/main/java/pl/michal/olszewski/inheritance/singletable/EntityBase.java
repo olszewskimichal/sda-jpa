@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 @Entity(name = "SINGLE_TABLE")
@@ -13,34 +12,34 @@ import javax.persistence.Table;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 abstract class EntityBase {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+  @Id
+  @GeneratedValue
+  private Long id;
 
-    private String name;
-
-
-    public EntityBase() {
-    }
-
-    public EntityBase(String name) {
-        this.name = name;
-    }
+  private String name;
 
 
-    public Long getId() {
-        return id;
-    }
+  public EntityBase() {
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public EntityBase(String name) {
+    this.name = name;
+  }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 }

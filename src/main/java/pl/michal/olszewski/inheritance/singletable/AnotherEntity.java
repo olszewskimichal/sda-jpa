@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 @DiscriminatorValue("other")
 class AnotherEntity extends EntityBase {
 
-    public AnotherEntity(String name) {
-        super(name);
-    }
+  public AnotherEntity(String name) {
+    super(name);
+  }
 }
