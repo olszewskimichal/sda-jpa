@@ -1,13 +1,10 @@
 package pl.michal.olszewski.zadania.zad11;
 
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "UserZad11")
+@Table(name = "UserZad11")
 public class User {
 
   @Id

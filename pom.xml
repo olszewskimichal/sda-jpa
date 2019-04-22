@@ -28,21 +28,6 @@
       <version>5.4.2.Final</version>
     </dependency>
     <dependency>
-      <artifactId>jooq</artifactId>
-      <groupId>org.jooq</groupId>
-      <version>3.11.10</version>
-    </dependency>
-    <dependency>
-      <artifactId>jooq-meta</artifactId>
-      <groupId>org.jooq</groupId>
-      <version>3.11.10</version>
-    </dependency>
-    <dependency>
-      <artifactId>jooq-codegen</artifactId>
-      <groupId>org.jooq</groupId>
-      <version>3.11.10</version>
-    </dependency>
-    <dependency>
       <artifactId>slf4j-api</artifactId>
       <groupId>org.slf4j</groupId>
       <version>1.7.25</version>
