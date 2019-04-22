@@ -14,7 +14,6 @@ public class Address {
   @NotNull
   private String zipCode;
 
-
   public Address() {
 
   }

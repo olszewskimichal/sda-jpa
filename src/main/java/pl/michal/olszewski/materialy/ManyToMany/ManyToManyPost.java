@@ -18,14 +18,6 @@ public class ManyToManyPost {
   private Long id;
 
   private String title;
-
-  public ManyToManyPost() {
-  }
-
-  public ManyToManyPost(String title) {
-    this.title = title;
-  }
-
   @ManyToMany(cascade = {
       CascadeType.PERSIST,
       CascadeType.MERGE
@@ -35,6 +27,13 @@ public class ManyToManyPost {
       inverseJoinColumns = @JoinColumn(name = "tag_id")
   )
   private List<ManyToManyTag> tags = new ArrayList<>();
+
+  public ManyToManyPost() {
+  }
+
+  public ManyToManyPost(String title) {
+    this.title = title;
+  }
 
   //Getters and setters ommitted for brevity
 

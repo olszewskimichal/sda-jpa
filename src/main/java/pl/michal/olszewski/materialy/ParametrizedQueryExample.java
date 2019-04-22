@@ -11,13 +11,13 @@ public class ParametrizedQueryExample {
 
     TypedQuery<Employee> query1 = entityManager
         .createQuery("select e from Employee e where e.name = ?1", Employee.class);
-    query1.setParameter(1,"imie4");
+    query1.setParameter(1, "imie4");
     List<Employee> resultList1 = query1.getResultList();
     resultList1.stream()
         .forEach(employee -> System.out.println(employee));
 
     entityManager.createQuery("select e from Employee e where e.name = :employeeName", Employee.class)
-        .setParameter("employeeName","imie3")
+        .setParameter("employeeName", "imie3")
         .getResultList()
         .stream()
         .forEach(employee -> System.out.println(employee));
