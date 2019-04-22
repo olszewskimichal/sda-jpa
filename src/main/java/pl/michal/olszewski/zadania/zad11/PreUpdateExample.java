@@ -3,7 +3,6 @@ package pl.michal.olszewski.zadania.zad11;
 import static pl.michal.olszewski.materialy.EntityManagerSingleton.INSTANCE;
 
 import javax.persistence.EntityManager;
-import pl.michal.olszewski.materialy.pre.Car;
 
 public class PreUpdateExample {
 
