@@ -1,5 +1,5 @@
 
-package pl.michal.olszewski;
+package pl.michal.olszewski.materialy;
 
 import pl.michal.EntityManagerCreator;
 import pl.michal.Movies;

@@ -1,5 +1,4 @@
-/*
-package pl.michal.olszewski;
+package pl.michal.olszewski.materialy;
 
 import javax.persistence.*;
 
@@ -72,4 +71,4 @@ public class User {
         this.deliveryaddress = deliveryaddress;
     }
 }
-*/
+
