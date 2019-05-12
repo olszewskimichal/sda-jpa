@@ -1,4 +1,4 @@
-package pl.michal.olszewski.materialy.optymalizacja.one.to.one.undirectional;
+package pl.michal.olszewski.materialy.optymalizacja.one.to.one.bidirectional.strong;
 
 import static pl.michal.olszewski.materialy.EntityManagerSingleton.INSTANCE;
 
@@ -8,7 +8,7 @@ public class SelectPostWithDetails {
 
   public static void main(String[] args) {
     EntityManager em = INSTANCE.getEntityManager();
-    Post post = em.find(Post.class, 8L);
+    Post3 post = em.find(Post3.class, 20L);
     System.err.println(post);
   }
 }
